@@ -1,0 +1,5 @@
+argcomplete==1.12.1
+pyelftools==0.27
+sh==1.14.0
+tqdm==4.50.2
+yautil==0.0.11

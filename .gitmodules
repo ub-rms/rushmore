@@ -1,0 +1,21 @@
+[submodule "u-boot-imx6"]
+	path = u-boot-imx6
+	url = https://github.com/boundarydevices/u-boot-imx6
+[submodule "prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9"]
+	path = prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9
+	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9
+	branch = android-7.1.1_r13
+[submodule "prebuilts/ndk"]
+	path = prebuilts/ndk
+	url = https://android.googlesource.com/platform/prebuilts/ndk
+	branch = android-7.1.1_r13
+[submodule "prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9"]
+	path = prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9
+	url = https://android.googlesource.com/platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9
+	branch = android-7.1.1_r13
+[submodule "aes/tiny-AES-c"]
+	path = aes/tiny-AES-c
+	url = https://github.com/kokke/tiny-AES-c.git
+[submodule "nss"]
+	path = nss
+	url = https://github.com/nss-dev/nss.git
