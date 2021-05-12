@@ -3,7 +3,7 @@
 
 This repository has source code of Rushmore system.
 
-A user needs to have following physical devices to build, flash and test to follow the instructions. 
+A user needs to have following physical devices to build, flash and test for the following instructions. 
 * **Board**: Nitrogen6q Sabrelite
 * **Display**: BD070LIC2 – 7″ Touchscreen Display
 
