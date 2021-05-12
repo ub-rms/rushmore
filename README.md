@@ -3,11 +3,12 @@
 
 This repository has source code of Rushmore system.
 
-A user needs to have following physical devices to build, flash and test for the following instructions. 
+To build, flash and test, you need to have following physical devices. 
 * **Board**: Nitrogen6q Sabrelite
 * **Display**: BD070LIC2 – 7″ Touchscreen Display
 
-To control U-Boot console in this instruction, a user needs to connect a serial port cable from a board to the local machine. Then, you can use **_picocom_** to enter a U-Boot console as below (assuming the connected serial port is appeared as **_/dev/ttyUSB0_**): 
+Before starting, you need to be able to control U-Boot console of a device to follow the instructions. 
+Connect the board with the local machine using a serial port cable, and then use **_picocom_** to enter a U-Boot console as below (assuming the connected serial port is appeared as **_/dev/ttyUSB0_**): 
 ```sh
 $ sudo picocom -b 115200 -r -l /dev/ttyUSB0
 ```
