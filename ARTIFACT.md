@@ -16,7 +16,7 @@ For the _"Artifacts Available"_ badge, we make our source code available in this
 <a name="build-only"></a>  
 # Build-Only Instructions
  
-We provide a VirtualBox VM image (Ubuntu, 8.7GB) containing all required packages, prebuilt AOSP images (Nougat-7.1.1), the source code for Rushmore, and all environmental settings prepared.
+We provide a VirtualBox VM image (Ubuntu, 8.7GB) containing all required packages, prebuilt AOSP images (Nougat-7.1.1), the source code for Rushmore, and all environmental settings prepared. The AOSP prebuilt images are only necessary for flashing and testing Rushmore when following [the full instructions](README.md).
 
 From [this link](https://drive.google.com/file/d/1UTwoowsseZpnz27dSORehDBXVNfIXwBm/view?usp=sharing), download the VM image and install it using VirtualBox Manager with the following settings:
 ```
