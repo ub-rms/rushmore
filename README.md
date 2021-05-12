@@ -38,7 +38,7 @@ Next, add tools directory to your `$PATH` (for later steps):
 u-boot-imx6$ export PATH=$PATH:${PWD}/tools
 ```
 
-To copy the latest U-Boot image to SD card, mount the SD card (assuming that mounted path is _${MOUNTED_SDCARD_PATH}_) and run below script:
+To copy the latest U-Boot image to SD card, mount the SD card (assuming that the mounted path is _${MOUNTED_SDCARD_PATH}_) and run below script:
 ```sh
 u-boot-imx6$ sudo ./copy_upgrade.sh ${MOUNTED_SDCARD_PATH}
 ```
