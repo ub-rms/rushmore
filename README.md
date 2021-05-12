@@ -136,20 +136,18 @@ This should produce the following files in **_bootscript/_**.
 Move to a directory that contains a testing script and example image files. 
 Then, type below to build a testing script:
 ```sh
-rushmore/bootscript$ cd ../librushmore
-rushmore/librushmore$ make
-rushmore/librushmore$ cd ../../rushmore-test
-rushmore-test$ make
+rushmore/bootscript$ cd ../test
+test$ make
 ```
-This should produce the following files in **_rushmore-test/_**. 
+This should produce the following files in **_test/_**. 
 * `run_test`
 
 Create Rushmore Encrypt Images (REI) with provided example images:
 ```sh
-rushmore-test$ python3 ../rushmore-source/img2rei.py images/randomized_keypad.png -c vcrypto
-rushmore-test$ python3 ../rushmore-source/img2rei.py images/cube_400x400.gif -c chacah20
+test$ python3 ../rushmore-source/img2rei.py images/randomized_keypad.png -c vcrypto
+test$ python3 ../rushmore-source/img2rei.py images/cube_400x400.gif -c chacah20
 ```
-This should produce the following files in **_rushmore-test/_**.
+This should produce the following files in **_test/_**.
 * `randomized_keypad_vcrypto.rei` - single image
 * `cube_400x400_chacha20.rei` - animated image (100 frames)
 
@@ -200,9 +198,9 @@ Now. we can test flashed Rushmore system with a testing script we built earlier 
 ### Push Testing Script and Example Images
 Using **_adb_** tool, push testing script and example images to the board.  
 ```sh
-$ adb push ~/Rushmore/rushmore-test/run_test /data/.
-$ adb push ~/Rushmore/rushmore-test/images/randomized_keypad_vcrypto.rei /data/.
-$ adb push ~/Rushmore/rushmore-test/images/cube_400x400_chacha20.rei /data/.
+$ adb push test/run_test /data/.
+$ adb push test/images/randomized_keypad_vcrypto.rei /data/.
+$ adb push test/images/cube_400x400_chacha20.rei /data/.
 ```
 
 ### Insert Rushmore Driver 
