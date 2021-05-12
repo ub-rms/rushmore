@@ -8,12 +8,10 @@ We aim for the following two badges:
 - **_Artifacts Evaluated - Functional_**: our system can be built correctly. 
 - **_Artifacts Available_**: we make source code publicly available with instructions.
 
-For the _"Artifacts Evaluated - Functional"_ badge, we explain how to build our system below ([Build-Only Instructions](#build-only)).
+For the _"Artifacts Evaluated - Functional"_ badge, we explain how to build our system below ([Build-Only Instructions](#build-only-instructions)).
 
 For the _"Artifacts Available"_ badge, we make our source code available in this repo. The full instructions on how to build, flash, and test our system are available [here](README.md). However, the full instructions require the same board and the display that we use.
 
-
-<a name="build-only"></a>  
 # Build-Only Instructions
  
 We provide a VirtualBox VM image (Ubuntu, 8.7GB) containing all required packages, prebuilt AOSP images (Nougat-7.1.1), the source code for Rushmore, and all environmental settings prepared. The AOSP prebuilt images are only necessary for flashing and testing Rushmore when following [the full instructions](README.md).
@@ -51,7 +49,6 @@ u-boot-imx6$ make -j2
 This should produce the following files in the same directory.
 * `u-boot.xxx` (xxx: bin, cfg, cfgout, imx, lds, map, srec, sym)
 
-<a name="kernel"></a>  
 ### Linux Kernel and Rushmore Kernel
 As the second step, compile the Linux kernel (for the normal world) and the Rushmore kernel (for the secure world) as follows.
 ```sh
