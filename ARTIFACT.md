@@ -6,14 +6,12 @@ _Rushmore: Securely Displaying Static and Animated Images Using TrustZone (MobiS
 
 We aim for the following two badges:
 - **_Artifacts Evaluated - Functional_**: our system can be built correctly. 
-- **_Artifacts Available_**: we make source code publicly available with instructions
+- **_Artifacts Available_**: we make source code publicly available with instructions.
 
-Thus, our instructions consist of two parts:
-1. Build-Only Instructions
-	- This part is for _"Artifacts Evaluated - Functional"_ to confirm that our system can be built correctly on a virtual machine provided. 
-2. Full Instructions - [Link](#full-instructions)
-	- We make our system publicly available in this repository. 
-	- Users who have the same board and display that we use can build, flash, and test Rushmore by following the instructions. 
+For the _"Artifacts Evaluated - Functional"_ badge, we explain how to build our system below ([Build-Only Instructions](#build-only)).
+
+For the _"Artifacts Available"_ badge, we make our source code available in this repo. The full instructions on how to build, flash, and test our system are available [here](README.md). However, the full instructions require the same board and the display that we use.
+
 
 <a name="build-only"></a>  
 # Build-Only Instructions
@@ -50,7 +48,7 @@ u-boot-imx6$ export CROSS_COMPILE=arm-linux-gnueabihf-
 u-boot-imx6$ make nitrogen6q_defconfig
 u-boot-imx6$ make -j2
 ```
-This should produce the following files in **_u-boot-imx/tools/_**, and in **_u-boot-imx/_**.
+This should produce the following files in the same directory.
 * `u-boot.xxx` (xxx: bin, cfg, cfgout, imx, lds, map, srec, sym)
 
 <a name="kernel"></a>  
@@ -61,10 +59,10 @@ u-boot-imx6$ cd ..
 rushmore$ python3 build/compile.py optee 
 ```
 This should produce the following output in ***out/***.
-* `zImage` - Linux kernel image that will replace the kernel image in original AOSP
-* `sImage` - Rushmore kernel image that will firstly boot
-* `imx6q-sabrelite.dtb` - device table of the newly created Linux kernel
-* `smc_driver.ko` - Rushmore driver to enable SMC call between NW and SW
+* `zImage` (the Linux kernel image that will replace the kernel image in original AOSP)
+* `sImage` (the Rushmore kernel image that will run in the secure world)
+* `imx6q-sabrelite.dtb` (the device table of the newly created Linux kernel)
+* `smc_driver.ko` (the Rushmore driver to enable SMC calls between the normal world and the secure world)
 
 ### Rushmore Library
 
@@ -74,7 +72,7 @@ As the third step, compile the Rushmore library (for the normal world) that app 
 rushmore$ cd librushmore
 librushmore$ make
 ```
-This should produce the following output in  _**librushmore/**_.
+This should produce the following output in the same directory.
 * `librushmore.a`
 * `librushmore.so` 
 
@@ -84,7 +82,7 @@ As the last step, build the boot script for U-Boot as follows.
    librushmore$ cd ../bootscript
    rushmore/bootscript$ make
    ```
-This should produce the following output in ***bootscript/***.
+This should produce the following output in the same directory.
 * `rushmore_bootscript.scr`
 
-**_This concludes all the steps to build all required images for Rushmore a boot script._**
+**_This concludes all the steps to build all required images for Rushmore and the boot script._**
