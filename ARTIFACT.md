@@ -2,7 +2,7 @@
 
 This repository explains how to evaluate the artifact for our paper: 
 
-_Rushmore: Securely Displaying Static and Animated Images Using TrustZone (MobiSys `21)_
+_Rushmore: Securely Displaying Static and Animated Images Using TrustZone (MobiSys'21)_
 
 We aim for the following two badges:
 - **_Artifacts Evaluated - Functional_**: our system can be built correctly. 
