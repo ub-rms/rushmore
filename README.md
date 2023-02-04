@@ -206,7 +206,7 @@ nitrogen6x:/# insmod /boot/smc_driver.ko
 Run the testing script and see the help page:
 ```sh
 nitrogen6x:/# cd data
-nitrogen6x:/data# ./run_test -h
+nitrogen6x:/data# ./run_test
 ```
 > Usage:&ensp; run_test&ensp;\<rei file path\>&ensp;[options...]
 >  * Options
@@ -221,7 +221,7 @@ nitrogen6x:/data# ./run_test -h
 Here are the commands to display images:
 ```sh
 nitrogen6x:/data# ./run_test randomized_keypad_vcrypto.rei
-nitrogen6x:/data# ./run_test cube_400x400_chacha20.rei -r 5 -d 3
+nitrogen6x:/data# ./run_test cube_400x400_chacha20.rei -p -r 5 -d 3
 ```
 * The first command displays a single randomized keypad image encrypted with Visual Crypto.
 * The second command displays three animated cube images 5 times encrypted with ChaCha20.
